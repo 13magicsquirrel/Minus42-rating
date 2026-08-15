@@ -229,11 +229,13 @@ img{-webkit-user-drag:none; user-drag:none;}
   background:linear-gradient(165deg,#FFF3D6,#FFE9B8);
   border:2px solid #EEDFAE; box-shadow:var(--m42-shadow-soft);
 }
-.mback span{
-  font-family:var(--m42-font-display); font-weight:800; color:var(--m42-orange);
-  font-size:clamp(18px,4.4vmin,44px); line-height:1; transform:rotate(-8deg);
+.mback .lk{
+  display:flex; flex-direction:column; align-items:center; line-height:.82;
+  font-family:var(--m42-font-display); font-weight:800; transform:rotate(-8deg);
   text-shadow:0 2px 0 rgba(255,255,255,.9);
 }
+.mback .lk i{font-style:normal; color:var(--m42-ink); font-size:clamp(9px,2.3vmin,22px);}
+.mback .lk b{color:var(--m42-orange); font-size:clamp(17px,4.2vmin,42px);}
 .mfront{
   background:#fff; border:2px solid var(--m42-border); transform:rotateY(180deg);
   box-shadow:var(--m42-shadow-soft); padding:8%;
@@ -1098,7 +1100,7 @@ GAMES.memory = {
       const card = el('div','mcard');
       card.innerHTML =
         '<div class="inner">'+
-          '<div class="mface mback"><span>42</span></div>'+
+          '<div class="mface mback"><span class="lk"><i>minus</i><b>42</b></span></div>'+
           '<div class="mface mfront"><img src="'+IMG[item.key]+'" alt="'+item.name+'"></div>'+
         '</div>';
       card.dataset.key = item.key;
