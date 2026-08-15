@@ -662,7 +662,9 @@ img{-webkit-user-drag:none; user-drag:none;}
   <!-- ============ GAME ============ -->
   <section class="screen" id="game">
     <div class="bar">
-      <img class="logo" id="gameLogo" alt="minus42">
+      <a class="brandlink" id="gameLogoLink" target="_blank" rel="noopener" aria-label="Visit minus42world.com">
+        <img class="logo" id="gameLogo" alt="minus42">
+      </a>
       <div class="dots" id="dots"></div>
       <div class="spacer"></div>
       <span class="timechip" id="timeChip">
@@ -1765,7 +1767,8 @@ function tastingsCsv(){
   // links
   $('#orderLinkHome').href = CONFIG.ORDER_URL;
   $('#orderLinkRes').href = CONFIG.ORDER_URL;
-  $('#homeLogoLink').href = CONFIG.ORDER_URL;   // logo → minus42 website
+  $('#homeLogoLink').href = CONFIG.ORDER_URL;   // home logo → minus42 website
+  $('#gameLogoLink').href = CONFIG.ORDER_URL;   // in-game logo → minus42 website
 
   // (home has no score line — nothing to paint)
   const paintBest = ()=>{};
